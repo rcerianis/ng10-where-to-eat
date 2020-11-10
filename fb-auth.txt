@@ -1,0 +1,18 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyDbXrbzF1z-AfdPuuFXV2XcF4IXdCQDo2g",
+    authDomain: "ng10-where-to-eat-459a2.firebaseapp.com",
+    databaseURL: "https://ng10-where-to-eat-459a2.firebaseio.com",
+    projectId: "ng10-where-to-eat-459a2",
+    storageBucket: "ng10-where-to-eat-459a2.appspot.com",
+    messagingSenderId: "1008238470980",
+    appId: "1:1008238470980:web:c8a61c8d93552c5efad911"
+  };
+const firebaseConfig = {
+  apiKey: "AIzaSyDbXrbzF1z-AfdPuuFXV2XcF4IXdCQDo2g",
+  authDomain: "ng10-where-to-eat-459a2.firebaseapp.com",
+  databaseURL: "https://ng10-where-to-eat-459a2.firebaseio.com",
+  projectId: "ng10-where-to-eat-459a2",
+  storageBucket: "ng10-where-to-eat-459a2.appspot.com",
+  messagingSenderId: "1008238470980",
+  appId: "1:1008238470980:web:c8a61c8d93552c5efad911"
+};
