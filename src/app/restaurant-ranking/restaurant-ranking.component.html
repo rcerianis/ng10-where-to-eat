@@ -1,0 +1,10 @@
+<h3>Résultats</h3>
+<div *ngIf="sortedRestaurants">
+
+    <mat-selection-list [multiple]="false">
+        <mat-list-option *ngFor="let resto of sortedRestaurants" [value]="resto">
+            {{resto.votes}} votes pour {{resto.name}}
+        </mat-list-option>
+      </mat-selection-list>
+      
+</div>
