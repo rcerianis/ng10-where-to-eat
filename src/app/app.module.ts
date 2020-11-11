@@ -15,16 +15,21 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatListModule} from '@angular/material/list';
 
 import { SuggestionFormComponent } from './suggestion-form/suggestion-form.component';
 import { environment } from 'src/environments/environment';
 import { SuggestionListComponent } from './suggestion-list/suggestion-list.component';
+import { RestaurantRankingComponent } from './restaurant-ranking/restaurant-ranking.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SuggestionFormComponent,
-    SuggestionListComponent
+    SuggestionListComponent,
+    RestaurantRankingComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +38,7 @@ import { SuggestionListComponent } from './suggestion-list/suggestion-list.compo
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatListModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule

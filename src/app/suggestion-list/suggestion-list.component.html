@@ -1,3 +1,9 @@
+<div><a href="contact">Contact</a></div>
+
+<!-- [nomage libre] -->
+<app-restaurant-ranking [restaurants$]="restaurants$"></app-restaurant-ranking>
+
+<hr/>
 
 <div *ngIf="!(restaurants$ | async); else restauList">
     Loading...
@@ -7,7 +13,11 @@
     <div *ngFor="let restau of restaurants$ | async">
         <div>Nom : {{restau.name}}</div>
         <div>Ajouté le : {{restau.createdAt | date:"dd/MM/yyyy à HH:mm"}}</div>
-        <div><button mat-stroked-button color="primary" (click)="vote(restau)">+</button> vote {{restau.votes}}</div>
+        <div>
+            <button mat-stroked-button color="primary"
+             (click)="vote(restau)">+</button>
+             votes: {{setRankLabel(restau)}}
+        </div>
         <div></div>
         <hr/>
     </div>

@@ -19,12 +19,16 @@ export class RestaurantService {
   }
 
   readRestaurants() {
-    return this.afs.collection<Restaurant>(this.collectionName);
+    return this.afs.collection<Restaurant>(this.collectionName, ref => ref.orderBy('name', 'asc'));
   }
 
   voteForRestaurant(restaurant: Restaurant) {
-    return this.afs.doc(`${this.collectionName}/${restaurant.id}`).update({
-      ...restaurant,
+    // return this.afs.doc(`${this.collectionName}/${restaurant.id}`).update({
+    //   ...restaurant,
+    //   votes: restaurant.votes + 1
+    // });
+    return this.afs.doc(`${this.collectionName}/${restaurant.id}`)
+    .update({
       votes: restaurant.votes + 1
     });
   }
